@@ -1,1 +1,1 @@
-include ':app', ':gaea'
+include ':app', ':plugin'
