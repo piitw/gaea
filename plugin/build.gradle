@@ -5,11 +5,11 @@ dependencies {
     compile localGroovy()
 }
 publish {
-    userOrg = 'piitw'
+    userOrg = 'wyman'
     repoName = 'plugin'
     groupId = 'com.piitw.plugin'
     artifactId = 'gaea'
-    publishVersion = '1.0.0'
+    publishVersion = '1.2.0'
     desc = 'Maven Publish Plugin'
     website = 'https://github.com/piitw/gaea'
 }

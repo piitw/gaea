@@ -1,8 +1,8 @@
 # Gaea
 
-[ ![Download](https://api.bintray.com/packages/piitw/plugin/gaea/images/download.svg?version=1.0.0) ](https://bintray.com/piitw/plugin/gaea/1.0.0/link)
+[ ![Download](https://api.bintray.com/packages/wyman/plugin/gaea/images/download.svg?version=1.2.0) ](https://bintray.com/wyman/plugin/gaea/1.2.0/link)[ ![License](http://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square)](http://www.apache.org/licenses/LICENSE-2.0)
 
-一款**Groovy**编写的打包发布**Android**项目的轻量级插件
+一款**Groovy**编写 发布**Android**项目到maven仓库的轻量级插件
 
 ## Usage
 
@@ -15,11 +15,33 @@ buildscript {
 
     }
     dependencies {
-		classpath 'com.piitw.plugin:gaea:[Latest-Version]'
+        classpath 'com.piitw.plugin:gaea:<Latest-Version>'
     }
 }
 ```
 
+module build.gradle添加
+
+``` groovy
+apply plugin: 'com.piitw.plugin'
+
+publish {
+    groupId = groupId
+    artifactId = artifactId
+    publishVersion = version
+    isDebug = isDebug 如为true，发布到快照仓库；反之则发布到正式仓库
+
+    repositoryUrl = 正式仓库地址
+    snapshotRepositoryUrl = 测试仓库地址
+    username = username
+    password = password
+}
+```
+使用 task `uploadArchives`进行发布
+
+```bash
+$ ./gradlew clean build :<library>:uploadArchives
+```
 
 
 ## LICENSE
