@@ -1,6 +1,6 @@
 # Gaea
 
-[ ![Download](https://api.bintray.com/packages/wyman/plugin/gaea/images/download.svg?version=1.2.0) ](https://bintray.com/wyman/plugin/gaea/1.2.0/link)[ ![License](http://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square)](http://www.apache.org/licenses/LICENSE-2.0)
+[ ![License](http://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square)](http://www.apache.org/licenses/LICENSE-2.0)
 
 一款**Groovy**编写 发布**Android**项目到maven仓库的轻量级插件
 
