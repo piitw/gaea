@@ -1,15 +1,25 @@
 apply plugin: 'groovy'
-apply plugin: 'com.novoda.bintray-release'
+
 dependencies {
-    compile gradleApi()
-    compile localGroovy()
+    implementation gradleApi()
+    implementation localGroovy()
 }
-publish {
-    userOrg = 'wyman'
-    repoName = 'plugin'
-    groupId = 'com.piitw.plugin'
-    artifactId = 'gaea'
-    publishVersion = '1.2.0'
-    desc = 'Maven Publish Plugin'
-    website = 'https://github.com/piitw/gaea'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.vanniktech:gradle-maven-publish-plugin:0.17.0'
+    }
 }
+
+allprojects {
+    plugins.withId("com.vanniktech.maven.publish") {
+        mavenPublish {
+            sonatypeHost = "S01"
+        }
+    }
+}
+
+apply plugin: "com.vanniktech.maven.publish"

@@ -2,7 +2,7 @@ package com.piitw.plugin.gaea.util
 
 import org.gradle.api.Project
 import org.gradle.api.artifacts.ExcludeRule
-import org.gradle.api.artifacts.maven.MavenPom
+import org.gradle.api.publish.maven.MavenPom
 
 static def addDependencies(MavenPom pom, Project project) {
 
